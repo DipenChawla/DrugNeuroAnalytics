@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    
+    
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/pop.css') }}">
+
+   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/animate.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/owl.carousel.min.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/owl.theme.default.min.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/magnific-popup.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/aos.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/bootstrap-datepicker.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/jquery.timepicker.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/flaticon.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/open-iconic-bootstrap.min.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/ionicons.min.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/icomoon.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+
+  <style>
+   .modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+#eff{
+      background-color: #DAF7A6;
+      color: #DAF7A6;
+     
+    }
+    #ineff{
+      background-color: #F7DC6F;
+      color: #F7DC6F;
+      
+    }
+    #adr{
+      background-color: #EC7063;
+      color: #EC7063;
+     
+    }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+    @media screen and (min-width: 768px) {
+        .modalDialog {
+          width: 100%; 
+        }
+        .modalDialog-sm {
+          width: 100%; 
+        }
+    }
+    @media screen and (min-width: 992px) {
+        .modalDialog-lg {
+          width: 100%; 
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .modalDialog > div  {
+          width: 100%; 
+        }
+        .modalDialog > div-sm {
+          width: 100%; 
+        }
+    }
+    @media screen and (min-width: 992px) {
+        .modalDialog > div-lg  {
+          width: 100%x; 
+        }
+    }
+</style>
+
+
+  </head>
+  <body>
+    <nav class="navbar py-4 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+    			<div class="col-lg-2 pr-4 align-items-center">
+		    		<a class="navbar-brand" href="/">We<span>Care</span></a>
+	    		</div>
+	    		<div class="col-lg-10 d-none d-md-block">
+		    		<div class="row d-flex">
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">Email: wecare@email.com</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">Phone: + 1235 2355 98</span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </nav>
+	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav mr-auto">
+	        	<li class="nav-item active"><a href="/" class="nav-link pl-0">Home</a></li>
+	        	<li class="nav-item "><a href="/about2" class="nav-link">About</a></li>
+	        	<li class="nav-item"><a href="/prediction" class="nav-link">Dashboard</a></li>
+	          <li class="nav-item"><a href="/contact2" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2" style="background-image: url({{ url_for('static', filename='images/bg_1.jpg') }});" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">Summary</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Summary <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+
+
+    <section>
+      <br>
+      <br>
+        <div class="container">
+            <div class="row">
+              <div class="col-lg" id="eff">
+                  <a href="#Effective" style="text-decoration: none;"><img src="{{url_for('static', filename='images/effective.png')}}"  /><br><h5>Top effective sentences </h5></a>
+              </div>
+              <div class="col-lg" id="ineff">
+                  <a href="#Ineffective" style="text-decoration: none;"><img src="{{url_for('static', filename='images/ineffective.png')}}" /><br><h5>Top ineffective sentences</h5></a>
+              </div>
+              <div class="col-lg" id="adr">
+                  <a href="#Adverse" style="text-decoration: none;"><img src="{{url_for('static', filename='images/adverse.png')}}" /><br><h5>Top adverse sentences</h5></a>
+              </div>
+            </div>
+          </div>
+        <!--<a href="#Effective"><img src="{{url_for('static', filename='images/effective.png')}}" /><br>Top effective sentences</a>
+        <a href="#Adverse">Top adverse Sentences</a>-->
+        <div id="Effective" class="modalDialog">
+            <div>
+              <a href="#close" title="Close" class="close">X</a>
+              <h2>Top Effective Sentences for {{drug}}</h2>
+              <table width="900">
+                  <tr>
+                    <th>Rank</th>
+                    <th>Effective Sentences</th>
+                    <th>Score</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>{{your_list1[0]}}</td>
+                    <td>{{score1[0]}}</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>{{your_list1[1]}}</td>
+                    <td>{{score1[1]}}</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>{{your_list1[2]}}</td>
+                    <td>{{score1[2]}}</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>{{your_list1[3]}}</td>
+                    <td>{{score1[3]}}</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>{{your_list1[4]}}</td>
+                    <td>{{score1[4]}}</td>
+                  </tr>
+                  </table>
+            </div>
+          </div>
+
+          <div id="Ineffective" class="modalDialog">
+              <div>
+                <a href="#close" title="Close" class="close">X</a>
+                <h2>Top Inffective Sentences for {{drug}}</h2>
+                <table width="900">
+                    <tr>
+                      <th>Rank</th>
+                      <th>Effective Sentences</th>
+                      <th>Score</th>
+                    </tr>
+                    {%for i in range(0, length)%}
+                    <tr>
+                      <td>{{i+1}}</td>
+                      <td>{{your_list3[i]}}</td>
+                      <td>{{score3[i]}}</td></tr>
+                    {% endfor %}
+                    <!--<tr>
+                      <td>1</td>
+                      <td>{{your_list3[0]}}</td>
+                      <td>{{score3[0]}}</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>{{your_list3[1]}}</td>
+                      <td>{{score3[1]}}</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>{{your_list3[2]}}</td>
+                      <td>{{score3[2]}}</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>{{your_list3[3]}}</td>
+                      <td>{{score3[3]}}</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>{{your_list3[4]}}</td>
+                      <td>{{score3[4]}}</td>
+                    </tr>-->
+                    </table>
+              </div>
+            </div>
+
+        <div id="Adverse" class="modalDialog">
+            <div>
+              <a href="#close" title="Close" class="close">X</a>
+              <h2>Top Adverse Sentences for {{drug}}</h2>
+              <table id='effective'>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Adverse Sentences</th>
+                    <th>Score</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>{{your_list2[0]}}</td>
+                    <td>{{score2[0]}}</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>{{your_list2[1]}}</td>
+                    <td>{{score2[1]}}</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>{{your_list2[2]}}</td>
+                    <td>{{score2[2]}}</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>{{your_list2[3]}}</td>
+                    <td>{{score2[3]}}</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>{{your_list2[4]}}</td>
+                    <td>{{score2[4]}}</td>
+                  </tr>
+                  
+                </table>
+            </div>
+          </div>
+
+          <br><br>
+          <div class="container">
+          <div><h2>Top 10 cons for {{drug}}</h2></div>
+            <div>&nbsp&nbsp<img src='{{ g }}' ></img></div>
+          </div>
+    </section>
+    
+    <!--<h2>Top 10 cons for {{drug}} </h2>
+<ul>
+<h4>
+{%for i in range(0,9)%}
+
+      <p><li><span style="color: #ff7f50">{{cons[i]}}</span><h6> in {{occurences[i]}} reviews</h6></li> </p>
+  {% endfor %}
+</h4>
+</ul>-->
+      
+
+
+
+<!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+ <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-migrate-3.0.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/aos.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.animateNumber.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap-datepicker.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.timepicker.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/scrollax.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+
+    
+</body>
+</html>
+
+
+
+

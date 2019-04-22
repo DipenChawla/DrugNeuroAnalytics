@@ -1,0 +1,136 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+    <nav class="navbar py-4 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+    			<div class="col-lg-2 pr-4 align-items-center">
+		    		<a class="navbar-brand" href="/">We<span>Care</span></a>
+	    		</div>
+	    		<div class="col-lg-10 d-none d-md-block">
+		    		<div class="row d-flex">
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">Email: wecare@email.com</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">Phone: + 1235 2355 98</span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </nav>
+	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav mr-auto">
+	        	<li class="nav-item"><a href="/" class="nav-link pl-0">Home</a></li>
+	        	<li class="nav-item active"><a href="/about2" class="nav-link">About</a></li>
+	        	<li class="nav-item"><a href="/prediction" class="nav-link">Dashboard</a></li>
+	          <li class="nav-item"><a href="/contact2" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('static/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">About Us</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About us <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<section class="ftco-section ftco-no-pt ftc-no-pb">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-md-5 p-md-5 img img-2 mt-5 mt-md-0" style="background-image: url(static/images/about.jpg);">
+					</div>
+					<div class="col-md-7 wrap-about py-4 py-md-5 ftco-animate">
+	          <div class="heading-section mb-5">
+	          	<div class="pl-md-5 ml-md-5">
+		          	<span class="subheading">About WeCare</span>
+		            <h2 class="mb-4" style="font-size: 28px;">Medical specialty concerned with the care of patients dying due to adverse drug reactions</h2>
+	            </div>
+	          </div>
+	          <div class="pl-md-5 ml-md-5 mb-5">
+							<p>Adverse drug reactions are among the most important causes of death nowadays. Expensive clinical trials are also not sufficient to identify all the adverse reactions of a particular drug. So we have developed a system that users's experience with the drugs to find out the adverse reactions caused by that drug.</p>
+							<div class="row mt-5 pt-2">
+								<div class="col-lg-6">
+									<div class="services-2 d-flex">
+										<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="fa fa-list"></span></div>
+										<div class="text">
+											<h3>User Reviews</h3>
+											<p>We have monitored about more than 3000 reviews sharing experiences of various users.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="services-2 d-flex">
+										<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="fa fa-globe"></span></div>
+										<div class="text">
+											<h3>Websites</h3>
+											<p>The reviews obtained were from various websites i.e. everydayhealth.org, drugs.com, webmd.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="services-2 d-flex">
+										<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="fa fa-bar-chart"></span></div>
+										<div class="text">
+											<h3>Visualisation</h3>
+											<p>To compare the adverseness of various drugs, we have provided various types of visualisation like stacked bar chart, grouped bar chart and pie chart.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="services-2 d-flex">
+										<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="fa fa-list-alt"></span></div>
+										<div class="text">
+											<h3>Summarization</h3>
+											<p>After analyzing the user reviews, we have generated a summary consisting of top ranked reviews, top efective words and top adverse words.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-intro" style="background-image: url(static/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9">
+						<h2>Your Health is Our Top Priority</h2>
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  {% endblock %}

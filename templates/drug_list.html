@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/animate.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/owl.carousel.min.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/owl.theme.default.min.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/magnific-popup.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/aos.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/bootstrap-datepicker.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/jquery.timepicker.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/flaticon.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/open-iconic-bootstrap.min.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/ionicons.min.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/icomoon.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+
+<style>
+.content{
+  text-align: center;
+
+
+  }
+  .inner{
+    display: inline-block;
+  }
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 340px;
+}
+
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 340px;
+}
+
+.styled-select.slate {
+   background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
+   height: 34px;
+   width: 340px;
+}
+
+.styled-select.slate select {
+   border: 1px solid #ccc;
+   font-size: 16px;
+   height: 34px;
+   width: 340px;
+}
+</style>
+
+</head>
+</head>
+<body>
+  <nav class="navbar py-4 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
+    <div class="container">
+      <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+        <div class="col-lg-2 pr-4 align-items-center">
+          <a class="navbar-brand" href="/">We<span>Care</span></a>
+        </div>
+        <div class="col-lg-10 d-none d-md-block">
+          <div class="row d-flex">
+            <div class="col-md pr-4 d-flex topper align-items-center">
+              <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+              <span class="text">Email: wecare@email.com</span>
+            </div>
+            <div class="col-md pr-4 d-flex topper align-items-center">
+              <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+              <span class="text">Phone: + 1235 2355 98</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container d-flex align-items-center">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a href="/" class="nav-link pl-0">Home</a></li>
+          <li class="nav-item"><a href="/about2" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="/prediction" class="nav-link">Dashboard</a></li>
+          <li class="nav-item"><a href="/contact2" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+  
+  <section class="hero-wrap hero-wrap-2" style="background-image: url({{ url_for('static', filename='images/bg_1.jpg') }});" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-center">
+        <div class="col-md-9 ftco-animate text-center">
+          <h1 class="mb-2 bread">Drugs' List</h1>
+          <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Drugs' List <i class="ion-ios-arrow-forward"></i></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content">
+<div class="content">
+<div class="inner">
+<h3>Choose the drug to get it's summary</h3>
+<form method="POST">
+ <div class="styled-select slate">
+<select name="text" size="1" class="styled-select slate">
+ <option value="acetazolamide">Acetazolamide</option>
+  <option value="carbamazepine">Carbamazepine</option>
+  <option value="phenobarbital">Phenobarbital</option>
+  <option value="phenytoin">Phenytoin</option>
+  <option value="phenytoin">Depakote</option>
+</select>
+</div>
+</div>
+<br>
+    <input type="submit" value="Submit">
+</form>
+
+</section>
+
+
+
+<!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+ <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-migrate-3.0.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/aos.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.animateNumber.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap-datepicker.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.timepicker.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/scrollax.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+
+
+    

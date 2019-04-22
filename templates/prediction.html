@@ -1,0 +1,81 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <nav class="navbar py-4 navbar-expand-lg ftco_navbar navbar-light bg-light flex-row">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+    			<div class="col-lg-2 pr-4 align-items-center">
+		    		<a class="navbar-brand" href="/">We<span>Care</span></a>
+	    		</div>
+	    		<div class="col-lg-10 d-none d-md-block">
+		    		<div class="row d-flex">
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">Email: wecare@email.com</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">Phone: + 1235 2355 98</span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </nav>
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('static/images/pred_1.jpg');" data-stellar-background-ratio="0.9">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">Know your drug better</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb contact-section">
+			<div class="container" align="center">
+
+					<div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
+						<form  method = "POST" action="/">
+
+              <div class="form-group">
+
+                <textarea name="review" id="review_id" cols="30" rows="7" class="form-control" placeholder="Enter your review:"></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary py-3 px-5"><i class="fa fa-database"></i> Submit</button>
+              <button type="reset" class="btn btn-danger py-3 px-5"><i class="fa fa-eraser"></i> Clear</button>
+
+              </div>
+            </form>
+					</div>
+				</div>
+
+        	<div class="container" align="center">
+            <div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
+    	       <div class="alert alert-success" role="alert">
+               <p class="alert-heading">Result</p>
+                 <p>{{output}}</p>
+                
+    	        </div>
+                  </div>
+                       </div>
+			                    </div>
+		                        </section>
+
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <script>
+  if ( window.history.replaceState ) {
+    window.history.replaceState( null, null, window.location.href );
+  }
+  </script>
+
+  {% endblock %}
