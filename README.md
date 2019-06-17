@@ -24,4 +24,4 @@ The article also includes a part on building visualisations using Bokeh for effe
 
 # App link
 
-The complete app is now on [Heroku](https://we-care-neuro.herokuapp.com/).
+The complete app is now on [Heroku](https://we-care-neuro.herokuapp.com/) and the prediction app [here](https://we-care-neuro.herokuapp.com/prediction)
